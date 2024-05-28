@@ -12,18 +12,18 @@ public class mainChorme {
 	ChromeDriver chromeDriver;
 
 	@Before
-    public void setUp() {
-    	// load chrome driver
-        chromeDriver = new ChromeDriver();
-        chromeDriver.manage().window().maximize();
-        chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    	public void setUp() {
+    		// load chrome driver
+      		chromeDriver = new ChromeDriver();
+        	chromeDriver.manage().window().maximize();
+        	chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-    }
+    	}
 
-    //@After
-    public void tearDown(){
-    	// close the chrome
-        chromeDriver.quit();
-    }
+    	@After
+    	public void tearDown(){
+    		// close the chrome
+       		chromeDriver.quit();
+    	}
 
 }
