@@ -24,18 +24,18 @@ public class DragandDrop extends mainChorme {
 		action.dragAndDrop(source, target).perform();
 		
 		//Verify that the drag and drop operation is successful by checking the color property of the target CSS
-        String backGround = target.getCssValue("background-color");
-        System.out.println("Background color after drag and drop: " + backGround);
+       		String backGround = target.getCssValue("background-color");
+        	System.out.println("Background color after drag and drop: " + backGround);
 		
-        //Verify that the text of the target element changes
-        String targetText = target.getText();
-        if(targetText.equals("Dropped!")) {
-            System.out.println("Drag and drop operation was successful.");
-        }
-        else {
-            System.out.println("Drag and drop operation was failed.");
+        	//Verify that the text of the target element changes
+        	String targetText = target.getText();
+        	if(targetText.equals("Dropped!")) {
+            		System.out.println("Drag and drop operation was successful.");
+        	}
+        	else {
+            		System.out.println("Drag and drop operation was failed.");
 
-        }
+        	}
 	}
 }
 
