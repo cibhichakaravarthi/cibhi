@@ -12,9 +12,9 @@ public class faceBook extends mainChorme {
 		chromeDriver.get("https://www.facebook.com");
 		//verify we landed on facebook
 		if (!chromeDriver.getTitle().contains("Facebook")) {
-            System.out.println("Failed to open Facebook homepage.");
-            return;
-        }
+            		System.out.println("Failed to open Facebook homepage.");
+            		return;
+        	}
 		//click create button
 		WebElement createButton = chromeDriver.findElement(By.xpath("//a[text()='Create new account']"));
 		createButton.click();
@@ -43,17 +43,15 @@ public class faceBook extends mainChorme {
 		
 		//Select gender button
 		WebElement gender = chromeDriver.findElement(By.xpath("//input[@value='2']"));
-        gender.click();
+        	gender.click();
 
-        //click submit button
-        WebElement submit = chromeDriver.findElement(By.xpath("//button[@name='websubmit']"));
+        	//click submit button
+        	WebElement submit = chromeDriver.findElement(By.xpath("//button[@name='websubmit']"));
 		submit.click();
 		
 		//I cannot move further it showing error message 
 		//That email can't be used. Try a different one or sign up with mobile number instead.
-
-
-		
+	
 	}
 
 }
