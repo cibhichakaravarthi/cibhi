@@ -28,11 +28,11 @@ public class frame extends mainChorme {
 		//Send hello people inside p tag
 		p.sendKeys("Hello people");
         
-        //verify the enter name is correct or not
-        String name = p.getText();
-        System.out.println(name);	
+		//verify the enter name is correct or not
+        	String name = p.getText();
+        	System.out.println(name);	
         
-        //The page not working properly so we can't write hello people text inside the p tag
-	}
+        	//The page not working properly so we can't write hello people text inside the p tag
+		}
 
 }
