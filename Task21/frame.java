@@ -24,15 +24,14 @@ public class frame extends mainChorme {
 		//locate p tag inside frame
 		WebElement p = chromeDriver.findElement(By.id("tinymce"));
 		
-		p.clear();
-		//Send hello people inside p tag
-		p.sendKeys("Hello people");
+		//Send hello people inside p tag using javascript
+		JavascriptExecutor js = (JavascriptExecutor) chromeDriver;
+        	js.executeScript("arguments[0].innerText = 'Hello People';", p);
         
 		//verify the enter name is correct or not
         	String name = p.getText();
         	System.out.println(name);	
         
-        	//The page not working properly so we can't write hello people text inside the p tag
 		}
 
 }
