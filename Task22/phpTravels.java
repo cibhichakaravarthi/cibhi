@@ -46,22 +46,22 @@ public class phpTravels extends mainChorme{
 		submit.click();
 		
 		//verify the page submission 
-        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(15));
-        WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//strong[contains(text(),'Thank you!')]")));
-        if(success.getText().equals("Thank you!")) {
-        	System.out.println("Form successfully submitted");
-        }
-        else {
-        	System.out.println("Form is not submitted");
-        }
-        
-        //take screenshot after page submission
-        TakesScreenshot ss = ((TakesScreenshot) chromeDriver);
-        File srcFile = ss.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("Screenshot.png");
-        ImageIO.write(ImageIO.read(srcFile), "png", destFile);
-        System.out.println("Screenshot was taken and stored in this path: " +destFile.getAbsolutePath());
-
+	        WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(15));
+	        WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//strong[contains(text(),'Thank you!')]")));
+	        if(success.getText().equals("Thank you!")) {
+	        	System.out.println("Form successfully submitted");
+	        }
+	        else {
+	        	System.out.println("Form is not submitted");
+	        }
+	        
+	        //take screenshot after page submission
+	        TakesScreenshot ss = ((TakesScreenshot) chromeDriver);
+	        File srcFile = ss.getScreenshotAs(OutputType.FILE);
+	        File destFile = new File("Screenshot.png");
+	        ImageIO.write(ImageIO.read(srcFile), "png", destFile);
+	        System.out.println("Screenshot was taken and stored in this path: " +destFile.getAbsolutePath());
+	
 
 	}
 
