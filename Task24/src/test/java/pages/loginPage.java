@@ -41,9 +41,9 @@ public class loginPage extends BasePage {
     }
 
 	public void verifylogin(String login) throws InterruptedException {
-		// TODO Auto-generated method stub
+		//verify login
 		Thread.sleep(4000); // Wait for potential changes on the page
-        Assert.assertTrue(logoutButton.isDisplayed(), "Logout button is not displayed, login failed.");
+        	Assert.assertTrue(logoutButton.isDisplayed(), "Logout button is not displayed, login failed.");
 		
 	}
 }
