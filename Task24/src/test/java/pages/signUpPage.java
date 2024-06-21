@@ -36,13 +36,12 @@ public class signUpPage extends BasePage  {
     public void clickSignUpButton() {
         signUpButton.click();
     }
-
 	public void verifysignUp(String signup) throws InterruptedException  {
 		Thread.sleep(2000); // Adding sleep to wait for the alert
-        String alertText = chromeDriver.switchTo().alert().getText();
-        Assert.assertTrue(alertText.contains(signup));
-        chromeDriver.switchTo().alert().accept();
-		
+	        String alertText = chromeDriver.switchTo().alert().getText();
+	        Assert.assertTrue(alertText.contains(signup));
+	        chromeDriver.switchTo().alert().accept();
+			
 		
 	}
 }
